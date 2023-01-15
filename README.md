@@ -17,7 +17,7 @@ bugsPHP contains 640 bugs from the following open-source projects:
 | egulias--EmailValidator |                  1 |
 | vimeo--psalm            |                598 |
 ### Note
-Download the test repositories file [here](https://drive.google.com/file/d/1-5Lg6Yw3hc8ihkZ_ujSH7J-b9lwvIkSu/view?usp=share_link), and put it with main.py file
+Download the test repositories file [here](https://drive.google.com/file/d/1rtC2TGEhU6fdM13B4fS4FdhWx4QhxJH7/view?usp=share_link), and put it with main.py file
 ## Commands
 
 The command-line interface includes the following commands:
