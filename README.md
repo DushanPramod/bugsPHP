@@ -6,16 +6,18 @@ The projects
 ---------------
 bugsPHP contains 640 bugs from the following open-source projects:
 
-| **Project name**        | **Number of bugs** |
-|-------------------------|--------------------|
-| doctrine--orm           |                  1 |
-| doctrine--dbal          |                  1 |
-| Seldaek--monolog        |                  3 |
-| composer--composer      |                 28 |
-| briannesbitt--Carbon    |                  6 |
-| laravel--framework      |                  2 |
-| egulias--EmailValidator |                  1 |
-| vimeo--psalm            |                598 |
+| **Project name**                        | **Number of bugs** |
+|-----------------------------------------|--------------------|
+| laravel--framework                      |                106 |
+| composer--composer                      |                 18 |
+| symfony--symfony                        |                195 |
+| guzzle--guzzle                          |                  1 |
+| DesignPatternsPHP--DesignPatternsPHP    |                  1 |
+| Seldaek--monolog                        |                  7 |
+| PHPMailer--PHPMailer                    |                  2 |
+| briannesbitt--Carbon                    |                 20 |
+| nikic--PHP-Parser                       |                  3 |
+| w7corp--easywechat                      |                 11 |
 ### Note
 Download the test repositories file [here](https://drive.google.com/file/d/1tJo-ikMXJVNmz32qrtZrqki5DkGywvek/view?usp=sharing), and put it with main.py file
 ## Commands
