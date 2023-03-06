@@ -13,12 +13,12 @@ def checkout(param_dict):
     checkout_fixed_cmd = ["git", "checkout","-f", bug_info['fixed_commit_id']]
     checkout_buggy_cmd = ["git", "checkout","-f", bug_info['bug_commit_id']]
     if(param_dict["version"] == "fixed"):
-        sp.call(checkout_fixed_cmd, shell=False, cwd=os.path.join(param_dict["output"], bug_info['repo_name']))
+        sp.call(checkout_fixed_cmd, shell=False, cwd=os.path.join(param_dict["output"], bug_info['repo_name']), stdout=sp.DEVNULL, stderr=sp.STDOUT)
     elif(param_dict["version"] == "buggy"):
         shutil.copytree(param_dict["output"], os.path.join(param_dict["output"], 'tmp-' + bug_info['fixed_commit_id']))
         
-        sp.call(checkout_fixed_cmd, shell=False, cwd=os.path.join(param_dict["output"], bug_info['repo_name']))
-        sp.call(checkout_buggy_cmd, shell=False, cwd=os.path.join(param_dict["output"], 'tmp-' + bug_info['fixed_commit_id'], bug_info['repo_name']))
+        sp.call(checkout_fixed_cmd, shell=False, cwd=os.path.join(param_dict["output"], bug_info['repo_name']), stdout=sp.DEVNULL, stderr=sp.STDOUT)
+        sp.call(checkout_buggy_cmd, shell=False, cwd=os.path.join(param_dict["output"], 'tmp-' + bug_info['fixed_commit_id'], bug_info['repo_name']), stdout=sp.DEVNULL, stderr=sp.STDOUT)
         
         for changed_file_path in bug_info['changed_file_paths']:
             src_path = os.path.join(param_dict["output"], 'tmp-' + bug_info['fixed_commit_id'], bug_info['repo_name'], changed_file_path)
