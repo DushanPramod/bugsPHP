@@ -8,8 +8,10 @@ import shutil
 def checkout(param_dict):
     SCRIPTDIR = os.path.abspath(os.path.dirname(sys.argv[0]))
     bug_info = get_bug_info(param_dict)
+    print('Extracting ...', 'project =', bug_info['repo_full_name'], 'bug_no =', bug_info['bug_no'])
     extract_repo(bug_info, param_dict["output"])
-
+    
+    print('Checking out ...', 'project =', bug_info['repo_full_name'], 'bug_no =', bug_info['bug_no'])
     checkout_fixed_cmd = ["git", "checkout","-f", bug_info['fixed_commit_id']]
     checkout_buggy_cmd = ["git", "checkout","-f", bug_info['bug_commit_id']]
     if(param_dict["version"] == "fixed"):

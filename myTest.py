@@ -6,6 +6,7 @@ import pydash as _
 
 
 def install(param_dict):
+    print('Installing packages ...')
     SCRIPTDIR = os.path.abspath(os.path.dirname(sys.argv[0]))
     bug_info = myProject.get_bug_info(param_dict)
 
