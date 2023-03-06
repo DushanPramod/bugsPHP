@@ -4,7 +4,7 @@ This repository contains PHP bug collection
 
 The projects
 ---------------
-bugsPHP contains 640 bugs from the following open-source projects:
+bugsPHP contains 364 bugs from the following open-source projects:
 
 | **Project name**                        | **Number of bugs** |
 |-----------------------------------------|--------------------|
