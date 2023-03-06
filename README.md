@@ -19,7 +19,7 @@ bugsPHP contains 640 bugs from the following open-source projects:
 | nikic--PHP-Parser                       |                  3 |
 | w7corp--easywechat                      |                 11 |
 ### Note
-Download the test repositories file [here](https://drive.google.com/file/d/1tJo-ikMXJVNmz32qrtZrqki5DkGywvek/view?usp=sharing), and put it with main.py file
+Download the test repositories file [here](https://drive.google.com/file/d/1-0HGS9WNd3NTmzKw7HeDd62HQPpfFwHa/view?usp=share_link), and put it with main.py file
 ## Commands
 
 The command-line interface includes the following commands:
