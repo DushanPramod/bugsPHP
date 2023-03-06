@@ -1,6 +1,14 @@
 import argument_parser
 import myProject
 import myTest
+import os
+import sys
+import subprocess as sp
+
+SCRIPTDIR = os.path.abspath(os.path.dirname(sys.argv[0]))
+if(not os.path.exists(os.path.join(SCRIPTDIR,'bug_metadata.json'))):
+    extract_cmd = "7z e " + SCRIPTDIR + "/bug_metadata.7z "
+    sp.call(extract_cmd, shell=True, stdout=sp.DEVNULL, stderr=sp.STDOUT)
 
 param_dict = argument_parser.arg_parser()
 if(param_dict["task"] == "checkout"):
