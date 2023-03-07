@@ -63,7 +63,7 @@ def run_all_test(param_dict):
     
     for test_case_chunck in get_chunked_test_cases_cmd_list(bug_info['test_results']['fixed']):
         test_script_cmd = ''
-        if(bug_info['test_folder'] == 'magento/magento2'):
+        if(bug_info['repo_full_name'] == 'magento/magento2'):
             test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' ' + bug_info['test_folder'] + ' --filter ' + test_case_chunck
         else:
             test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' --filter ' + test_case_chunck
@@ -89,7 +89,7 @@ def run_single_test_case(param_dict):
         exit()
     
     test_script_cmd = ''
-    if(bug_info['test_folder'] == 'magento/magento2'):
+    if(bug_info['repo_full_name'] == 'magento/magento2'):
         test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' ' + bug_info['test_folder'] + ' --filter ' + formatted_test_case_ref(bug_info['test_results']['fixed'][test_case_no-1])
     else:
         test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' --filter ' + formatted_test_case_ref(bug_info['test_results']['fixed'][test_case_no-1])
