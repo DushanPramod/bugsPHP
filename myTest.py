@@ -62,7 +62,12 @@ def run_all_test(param_dict):
         exit()
     
     for test_case_chunck in get_chunked_test_cases_cmd_list(bug_info['test_results']['fixed']):
-        test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' --filter ' + test_case_chunck
+        test_script_cmd = ''
+        if(bug_info['test_folder'] == 'magento/magento2'):
+            test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' ' + bug_info['test_folder'] + ' --filter ' + test_case_chunck
+        else:
+            test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' --filter ' + test_case_chunck
+    
         try:
             # print(test_script_cmd)
             sp.call(test_script_cmd, shell=True, cwd=os.path.join(param_dict['output'], bug_info['repo_name']))
@@ -83,7 +88,12 @@ def run_single_test_case(param_dict):
         print("can't find the test case")
         exit()
     
-    test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' --filter ' + formatted_test_case_ref(bug_info['test_results']['fixed'][test_case_no-1])
+    test_script_cmd = ''
+    if(bug_info['test_folder'] == 'magento/magento2'):
+        test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' ' + bug_info['test_folder'] + ' --filter ' + formatted_test_case_ref(bug_info['test_results']['fixed'][test_case_no-1])
+    else:
+        test_script_cmd = 'vendor/bin/' + bug_info['test_framework'] + ' --filter ' + formatted_test_case_ref(bug_info['test_results']['fixed'][test_case_no-1])
+    
     try:
         # print(test_script_cmd)
         sp.call(test_script_cmd, shell=True, cwd=os.path.join(param_dict['output'], bug_info['repo_name']))
