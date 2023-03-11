@@ -74,7 +74,7 @@ def run_all_test(param_dict):
             # sp.call(test_script_cmd, shell=True, cwd=os.path.join(param_dict['output'], bug_info['repo_name']))
             outs, errs = sp.Popen(test_script_cmd, shell=True, cwd=os.path.join(param_dict['output'], bug_info['repo_name']), 
                                   universal_newlines=True, stdout=sp.PIPE, stderr=sp.PIPE).communicate()
-            index = _.find_index(outs.split('\n'), lambda x: ('FAILURES!' in x) or ('ERRORS!' in x) or ('OK' in x))
+            index = _.find_last_index(outs.split('\n'), lambda x: ('FAILURES!' in x) or ('ERRORS!' in x) or ('OK' in x))
             print(outs.split('\n')[index])
             print(outs.split('\n')[index+1])
             print('')
