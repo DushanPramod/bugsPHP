@@ -4,7 +4,7 @@ This repository contains PHP bug collection
 
 The projects
 ---------------
-bugsPHP contains 530 bugs from the following open-source projects:
+bugsPHP contains 513 bugs from the following open-source projects:
 
 | **Project name**                        | **Number of bugs** |
 |-----------------------------------------|--------------------|
@@ -19,7 +19,7 @@ bugsPHP contains 530 bugs from the following open-source projects:
 | nikic--PHP-Parser                       |                  3 |
 | w7corp--easywechat                      |                 11 |
 ### Note
-Download the test repositories file [here](https://drive.google.com/file/d/1-2-at46aI32_WhDCmn7Jf3QFWVUidQZX/view?usp=share_link), and put it with main.py file
+Download the test repositories file [here](https://drive.google.com/file/d/1-3gJzSDDzmM8JCEKRXv2pLMAGbxbO5wz/view?usp=share_link), and put it with main.py file
 ## Commands
 
 The command-line interface includes the following commands:
