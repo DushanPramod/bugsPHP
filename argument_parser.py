@@ -8,7 +8,7 @@ def arg_parser():
     parser = argparse.ArgumentParser(description='   ')
     parser.add_argument('-p', '--project',  required=True, type=str, choices=get_projects(), help='')
     parser.add_argument('-b', '--bug-no',   required=True, type=int, help='')
-    parser.add_argument('-t', '--task',     required=True, type=str, choices=['checkout', 'install', 'test'], help='')
+    parser.add_argument('-t', '--task',     required=True, type=str, choices=['checkout', 'install', 'test', 'failing-test-only'], help='')
     parser.add_argument('-c', '--test-case',     required=False, type=int, help='')
     parser.add_argument('-v', '--version',  required=True, type=str, choices=['buggy', 'fixed'], help='')
     parser.add_argument('-o', '--output',   required=False, type=str, help='output folder')
