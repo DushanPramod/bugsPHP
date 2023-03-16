@@ -4,7 +4,7 @@ This repository contains PHP bug collection
 
 The projects
 ---------------
-bugsPHP contains 364 bugs from the following open-source projects:
+bugsPHP contains 530 bugs from the following open-source projects:
 
 | **Project name**                        | **Number of bugs** |
 |-----------------------------------------|--------------------|
@@ -52,11 +52,3 @@ The command-line interface includes the following commands:
    ```
    python3 main.py -p composer--composer -b 1 -t test -v fixed -o /content/tmp/
    ```
-4. Run only updated test files
-   ```
-   python3 main.py -p composer--composer -b 1 -t test-changed -v fixed -o /content/tmp/
-   ```
-5. Run only given test file
-   ```
-   python3 main.py -p composer--composer -b 1 -t test-changed -v fixed -o /content/tmp/ -f "tests/Composer/Test/Package/Version/VersionBumperTest.php"
-   ```#
