@@ -20,4 +20,4 @@ elif(param_dict["task"] == "test" and param_dict["test-case"] != None):
 elif(param_dict["task"] == "test"):
     myTest.run_all_test(param_dict)
 elif(param_dict["task"] == "failing-test-only"):
-    myTest.run_all_test(param_dict)
+    myTest.run_all_failing_test(param_dict)
